@@ -95,9 +95,9 @@ const ChatCard: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="linear_gradient_main_card bg-gradient-to-br from-gray-600 to-black flex items-center justify-center rounded-3xl">
+    <div className="linear_gradient_main_card flex items-center justify-center rounded-3xl">
       <motion.div
-        className="background_gradient_card border-2 border-[#FFFFFF1A] bg-gradient-to-tr from-neutral-900 to-neutral-800 rounded-3xl md:min-h-[280px] p-6 lg:px-4 lg:py-5 max-w-[100%] md:w-[100%] lg:w-[931px] mx-auto flex flex-col md:flex-row gap-[80px] relative overflow-hidden"
+        className="background_gradient_card border-2 border-[#FFFFFF1A]  rounded-3xl md:min-h-[280px] p-6 lg:px-4 lg:py-5 max-w-[100%] md:w-[100%] lg:w-[931px] mx-auto flex flex-col md:flex-row gap-[80px] relative overflow-hidden"
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
       >
@@ -111,24 +111,8 @@ const ChatCard: React.FC = () => {
           src={topfullRectangle}
           alt="right rectangle"
         />
-        <img
-          id="topright_rectange_bg"
-          src={topRightrectangle}
-          alt="right rectangle"
-        />
+        
         {/* <div className="absolute inset-0 rounded-3xl "></div> */}
-
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent "
-          animate={{
-            x: isHovered ? ["100%", "-100%"] : "100%",
-          }}
-          transition={{
-            duration: 2,
-            ease: "linear",
-            repeat: isHovered ? Infinity : 0,
-          }}
-        />
 
         <div className="flex flex-col justify-end relative z-10">
           <div className="max-h-[87px] w-full max-w-[276px]">
@@ -150,7 +134,7 @@ const ChatCard: React.FC = () => {
                  group-hover:bg-gradient-to-r from-black-700 to-white-700
                   bg-gradient-to-r from-black via-gray-800 to-black 
                    transition-all duration-500 border border-white/30
-                   z-50 lg:mt-[70px]
+                   z-[200px] lg:mt-[70px]
                  "
             >
               {/* <motion.span
