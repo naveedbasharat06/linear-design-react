@@ -35,7 +35,7 @@ const ChatItem: React.FC<ChatItemProps> = ({
       whileHover={{ scale: scale + 0.05 }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      className="chatcard_items relative flex items-center justify-between 
+      className="chatcard_items relative flex items-center justify-between
                  bg-gradient-to-tr from-neutral-900 to-neutral-800 rounded-[20px] p-3 lg:px-5 lg:py-4 backdrop-blur-md 
                  cursor-pointer transition-all duration-300 
                  overflow-hidden  group w-full border border-slate-600"
@@ -43,7 +43,7 @@ const ChatItem: React.FC<ChatItemProps> = ({
       {/* <div className="absolute inset-0 rounded-2xl shadow-lg shadow-purple-500/10 group-hover:shadow-purple-500/20 transition-shadow duration-300"></div>
       <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-black rounded-2xl"></div> */}
 
-      {/* <motion.div
+      <motion.div
         className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent rounded-2xl"
         animate={{
           x: isHovered ? ["100%", "-100%"] : "100%",
@@ -53,7 +53,7 @@ const ChatItem: React.FC<ChatItemProps> = ({
           ease: "linear",
           repeat: isHovered ? Infinity : 0,
         }}
-      /> */}
+      />
 
       <div className="flex items-center gap-3 relative z-10">
         <div className="relative">
@@ -73,11 +73,11 @@ const ChatItem: React.FC<ChatItemProps> = ({
           <p className="text-sm text-neutral-400 font-medium">{username}</p>
         </div>
       </div>
-      <div className="text-left relative z-10">
-        <p className="text-sm md:text-base font-medium text-white opacity-80">
+      <div className="text-left flex flex-col justify-between gap-2">
+        <p className="text-sm md:text-[15.34px] leading-[100%] tracking-normal font-medium text-white opacity-80">
           {lastMessage}
         </p>
-        <p className="text-xs md:text-sm font-medium text-neutral-400">
+        <p className="text-xs md:text-[15.34px] leading-[100%] tracking-normal font-medium text-neutral-400">
           {firstSeen}
         </p>
       </div>
@@ -94,7 +94,7 @@ const ChatCard: React.FC = () => {
   return (
     <div className="linear_gradient_main_card bg-gradient-to-br from-gray-600 to-black flex items-center justify-center rounded-3xl">
       <motion.div
-        className="background_gradient_card border-2 border-[#FFFFFF1A] bg-gradient-to-tr from-neutral-900 to-neutral-800 rounded-3xl md:min-h-[280px] p-6 lg:px-4 lg:py-5 max-w-[100%] md:w-[100%] lg:w-[931px] mx-auto flex flex-col md:flex-row gap-6 relative overflow-hidden"
+        className="background_gradient_card border-2 border-[#FFFFFF1A] bg-gradient-to-tr from-neutral-900 to-neutral-800 rounded-3xl md:min-h-[280px] p-6 lg:px-4 lg:py-5 max-w-[100%] md:w-[100%] lg:w-[931px] mx-auto flex flex-col md:flex-row gap-[80px] relative overflow-hidden"
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
       >
@@ -127,14 +127,14 @@ const ChatCard: React.FC = () => {
           }}
         />
 
-        <div className="flex-1 flex flex-col justify-center relative z-10">
+        <div className="flex flex-col justify-end relative z-10">
           <div className="max-h-[87px] w-full max-w-[276px]">
             <h1 className="text-lg md:text-xl lg:text-2xl font-medium leading-[120%] tracking-normal space-y-1">
-              <h3 className="text-white opacity-90"> Test Test Test Test </h3>
+              <h3 className="text-white opacity-90"> Test Tests Tests Test </h3>
               <h3 className="text-[#adadad] opacity-70">
-                Test Test Test Test.
+                Test Tests Test Tests.
               </h3>
-              <h3 className="text-white opacity-90">Test Test Test</h3>
+              <h3 className="text-white opacity-90">Tests Tests Tests</h3>
             </h1>
           </div>
 
@@ -147,7 +147,7 @@ const ChatCard: React.FC = () => {
                  group-hover:bg-gradient-to-r from-black-700 to-white-700
                   bg-gradient-to-r from-black via-gray-800 to-black 
                    transition-all duration-500 border border-white/30
-                   z-50
+                   z-50 lg:mt-[70px]
                  "
             >
               <motion.span
@@ -168,13 +168,13 @@ const ChatCard: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex-1 flex flex-col space-y-2 relative ">
+        <div className="flex-1 flex flex-col space-y-2 relative max-w-[600px]">
           <span className="translate-y-[25px] z-30 opacity-100">
             <ChatItem
               name="Test"
-              username="@sarahchen"
+              username="@sarahchen5556"
               lastMessage="Last messgage 1 week ago"
-              firstSeen="First seen 1 week ago"
+              firstSeen="First seen 1 weeks ago"
               avatar="https://randomuser.me/api/portraits/women/75.jpg"
               online
               scale={1.05}
@@ -185,7 +185,7 @@ const ChatCard: React.FC = () => {
               name="Martin G"
               username="@martin234234"
               lastMessage="Last messgage 2 week ago"
-              firstSeen="First seen 2 week ago"
+              firstSeen="First seen 2 weeks ago"
               avatar="https://randomuser.me/api/portraits/men/32.jpg"
               scale={1.0}
             />
