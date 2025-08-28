@@ -35,6 +35,16 @@
     top: 1px;
     width: 100%; 
 }
+#conversation_btn{
+    height: 39px;
+    position: absolute;
+    z-index: 200;
+    /* top: 0; */
+    left: 0;
+    right: 0;
+    /* bottom: 0; */
+    width: 211px;
+}
 
 #topfullWidth_rectange_bg {
 

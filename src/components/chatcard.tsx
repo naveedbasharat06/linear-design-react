@@ -5,6 +5,9 @@ import rightrectangle from "../images/rightRectangle.png";
 import topRightrectangle from "../images/NoiseTexture.png";
 import topfullRectangle from "../images/fullwidthTopRectangle.png";
 import bottomfullRectangle from "../images/bottomfullwidthrectangle.png";
+import conversation_btn from "../images/EllipseBtn585.png";
+
+
 
 interface ChatItemProps {
   name: string;
@@ -36,7 +39,7 @@ const ChatItem: React.FC<ChatItemProps> = ({
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       className="chatcard_items relative flex items-center justify-between
-                 bg-gradient-to-tr from-neutral-900 to-neutral-800 rounded-[20px] p-3 lg:px-5 lg:py-4 backdrop-blur-md 
+                 bg-gradient-to-tr from-neutral-900 to-neutral-800 rounded-[20px] p-3 lg:px-5 lg:pl-5 pr-4 backdrop-blur-md 
                  cursor-pointer transition-all duration-300 
                  overflow-hidden  group w-full border border-slate-600"
     >
@@ -55,12 +58,12 @@ const ChatItem: React.FC<ChatItemProps> = ({
         }}
       />
 
-      <div className="flex items-center gap-3 relative z-10">
+      <div className="flex items-center gap-3 relative z-10 ">
         <div className="relative">
           <img
             src={avatar}
             alt={name}
-            className="w-12 h-12 rounded-full object-cover border border-gray-700"
+            className="w-[45px] h-[45px] rounded-full object-cover border border-gray-700"
           />
           {online && (
             <span className="absolute top-0 right-0 w-4 h-4 bg-[#669900] rounded-full border border-neutral-200"></span>
@@ -81,7 +84,7 @@ const ChatItem: React.FC<ChatItemProps> = ({
           {firstSeen}
         </p>
       </div>
-      <button className="relative z-10 text-white hover:text-purple-400 transition-colors">
+      <button className="relative z-10 text-white hover:text-purple-400 transition-colors pr-2">
         ⋮
       </button>
     </motion.div>
@@ -130,11 +133,11 @@ const ChatCard: React.FC = () => {
         <div className="flex flex-col justify-end relative z-10">
           <div className="max-h-[87px] w-full max-w-[276px]">
             <h1 className="text-lg md:text-xl lg:text-2xl font-medium leading-[120%] tracking-normal space-y-1">
-              <h3 className="text-white opacity-90"> Test Tests Tests Test </h3>
+              <h3 className="text-white opacity-80">Test Tests Tests Test</h3>
               <h3 className="text-[#adadad] opacity-70">
-                Test Tests Test Tests.
+                Test Tests, Test Tests. 
               </h3>
-              <h3 className="text-white opacity-90">Tests Tests Tests</h3>
+              <h3 className="text-white opacity-80">Tests Tests Tests.</h3>
             </h1>
           </div>
 
@@ -142,7 +145,7 @@ const ChatCard: React.FC = () => {
             <motion.button
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
-              className="relative text-lg mt-6 md:mt-12 px-6 py-2 md:min-w-[219px] md:h-[45px] 
+              className="relative text-lg mt-6 md:mt-12 px-6 py-1 md:min-w-[219px] md:h-[42px] 
                  rounded-full text-white font-medium overflow-hidden
                  group-hover:bg-gradient-to-r from-black-700 to-white-700
                   bg-gradient-to-r from-black via-gray-800 to-black 
@@ -150,7 +153,7 @@ const ChatCard: React.FC = () => {
                    z-50 lg:mt-[70px]
                  "
             >
-              <motion.span
+              {/* <motion.span
                 className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
                 initial={{ x: "-100%" }}
                 animate={{ x: "100%" }}
@@ -160,16 +163,21 @@ const ChatCard: React.FC = () => {
                   repeat: Infinity,
                   repeatDelay: 1,
                 }}
-              />
-              <span className="relative z-10 flex items-center justify-center">
+              /> */}
+                <img
+          id="conversation_btn"
+          src={conversation_btn}
+          alt="conversation button"
+        />
+              <span className="relative z-10 flex items-center justify-center opacity-80">
                 Start a Conversation
               </span>
             </motion.button>
           </div>
         </div>
 
-        <div className="flex-1 flex flex-col space-y-2 relative max-w-[600px]">
-          <span className="translate-y-[25px] z-30 opacity-100">
+        <div className="flex-1 flex flex-col space-y-2 relative max-w-[600px] mr-3">
+          <span className="translate-y-[22px] z-30 opacity-100">
             <ChatItem
               name="Test"
               username="@sarahchen5556"
@@ -180,13 +188,14 @@ const ChatCard: React.FC = () => {
               scale={1.05}
             />
           </span>
-          <span className="translate-y-[-10px] z-20 opacity-80">
+          <span className="translate-y-[-9px] z-20 opacity-80">
             <ChatItem
               name="Martin G"
               username="@martin234234"
               lastMessage="Last messgage 2 week ago"
               firstSeen="First seen 2 weeks ago"
               avatar="https://randomuser.me/api/portraits/men/32.jpg"
+              online
               scale={1.0}
             />
           </span>
