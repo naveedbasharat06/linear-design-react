@@ -43,9 +43,7 @@ const ChatItem: React.FC<ChatItemProps> = ({
                  cursor-pointer transition-all duration-300 
                  overflow-hidden  group w-full border border-slate-600"
     >
-      {/* <div className="absolute inset-0 rounded-2xl shadow-lg shadow-purple-500/10 group-hover:shadow-purple-500/20 transition-shadow duration-300"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-black rounded-2xl"></div> */}
-
+     
       <motion.div
         className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent rounded-2xl"
         animate={{
@@ -70,34 +68,34 @@ const ChatItem: React.FC<ChatItemProps> = ({
           )}
         </div>
         <div>
-          <p className="text-white font-medium text-ms md:lg opacity-85">
+          <p className="text-white font-medium text-ms md:lg opacity-[80%]">
             {name}
           </p>
-          <p className="text-sm text-neutral-400 font-medium">{username}</p>
+          <p className="text-sm text-[#5C5C5C] font-medium">{username}</p>
         </div>
       </div>
       <div className="text-left flex flex-col justify-between gap-2">
-        <p className="text-sm md:text-[15.34px] leading-[100%] tracking-normal font-medium text-white opacity-80">
+        <p className="text-sm md:text-[15.34px] leading-[100%] tracking-normal font-medium text-white opacity-[60%]">
           {lastMessage}
         </p>
-        <p className="text-xs md:text-[15.34px] leading-[100%] tracking-normal font-medium text-neutral-400">
+        <p className="text-xs md:text-[15.34px] leading-[100%] tracking-normal font-medium text-[#5C5C5C]">
           {firstSeen}
         </p>
       </div>
-      <button className="relative z-10 text-white hover:text-purple-400 transition-colors pr-2">
+      <button className="relative z-10 text-white text-[20px] transition-colors pr-2">
         ⋮
       </button>
     </motion.div>
-  );
+  )
 };
 
 const ChatCard: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="linear_gradient_main_card flex items-center justify-center rounded-3xl">
+    <div className="linear_gradient_main_card flex items-center justify-center rounded-[20px]">
       <motion.div
-        className="background_gradient_card border-2 border-[#FFFFFF1A] bg-gradient-to-tr from-neutral-900 to-neutral-800  rounded-3xl md:min-h-[280px] p-6 lg:px-4 lg:py-5 max-w-[100%] md:w-[100%] lg:w-[931px] mx-auto flex flex-col md:flex-row gap-[80px] relative overflow-hidden"
+        className="background_gradient_card border-2 border-[#FFFFFF1A] bg-gradient-to-tr from-neutral-900 to-neutral-800  rounded-[20px] md:min-h-[280px] p-6 lg:px-4 lg:py-5 max-w-[100%] md:w-[100%] lg:w-[931px] mx-auto flex flex-col md:flex-row gap-[80px] relative overflow-hidden"
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
       >
@@ -109,59 +107,46 @@ const ChatCard: React.FC = () => {
         <img
           id="bottomfullWidth_rectange_bg"
           src={topfullRectangle}
-          alt="right rectangle"
+          alt="bottom rectangle"
         />
         <img
           id="topright_rectange_bg"
           src={topRightrectangle}
-          alt="right rectangle"
+          alt="top rectangle"
         />
-        {/* <div className="absolute inset-0 rounded-3xl "></div> */}
 
         <div className="flex flex-col justify-end relative z-[101]">
           <div className="max-h-[87px] w-full max-w-[276px]">
             <h1 className="text-lg md:text-xl lg:text-2xl font-medium leading-[120%] tracking-normal space-y-1">
-              <h3 className="text-white opacity-80">Test Tests Tests Test</h3>
-              <h3 className="text-[#adadad] opacity-70">
+              <h3 className="text-white opacity-80 leading-[100%] tracking-[0%] font-medium md:text-2xl font-inter">Test Tests Tests Test</h3>
+              <h3 className="text-[#adadad] opacity-70 leading-[100%] tracking-[0%] font-medium md:text-2xl font-inter">
                 Test Tests, Test Tests. 
               </h3>
-              <h3 className="text-white opacity-80">Tests Tests Tests.</h3>
+              <h3 className="text-white opacity-80 leading-[100%] tracking-[0%] font-medium md:text-2xl">Tests Tests Tests <span className="text-[#adadad] opacity-70">.</span></h3>
             </h1>
           </div>
 
-          <div className="group">
-            <motion.button
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
-              className="relative text-lg mt-6 md:mt-12 px-6 py-1 md:min-w-[219px] md:h-[42px] 
-                 rounded-full text-white font-medium overflow-hidden
-                 group-hover:bg-gradient-to-r from-black-700 to-white-700
-                  bg-gradient-to-r from-black via-gray-800 to-black 
-                   transition-all duration-500 border border-white/30
-                   z-[200px] lg:mt-[70px]
-                 "
-            >
-              {/* <motion.span
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                initial={{ x: "-100%" }}
-                animate={{ x: "100%" }}
-                transition={{
-                  duration: 1.5,
-                  ease: "linear",
-                  repeat: Infinity,
-                  repeatDelay: 1,
-                }}
-              /> */}
-                <img
-          id="conversation_btn"
-          src={conversation_btn}
-          alt="conversation button"
-        />
-              <span className="relative z-10 flex items-center justify-center opacity-80">
-                Start a Conversation
-              </span>
-            </motion.button>
-          </div>
+       <div className="group">
+  <motion.button
+    whileHover={{ scale: 1.03 }}
+    whileTap={{ scale: 0.98 }}
+    className="conversation_btn_cart relative text-[18.4px] mt-6 md:mt-11 px-6 py-1 md:min-w-[219px] md:h-[42px] 
+       rounded-[20px] text-[#ffffff] font-medium overflow-hidden
+       transition-all duration-500 
+       z-[200] lg:mt-[70px]"
+  >
+    <img
+      id="conversation_btn"
+      src={conversation_btn}
+      alt="conversation button"
+      className="relative z-10"
+    />
+
+    <span className="relative z-10 flex font-inter items-center justify-center opacity-80">
+      Start a Conversation
+    </span>
+  </motion.button>
+</div>
         </div>
 
         <div className="flex-1 flex flex-col space-y-2 relative max-w-[600px] mr-3">

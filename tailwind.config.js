@@ -14,6 +14,9 @@ module.exports = {
   animation: {
     gradientLeft: "gradientLeft 3s linear infinite",
   },
+   fontFamily: {
+        inter: ["Inter", "sans-serif"],
+      },
 }
   },
   plugins: [],

@@ -3,5 +3,12 @@
 }
 .chatcard{
   
-
 }
+@font-face {
+  font-family: 'Inter';
+  src: url('../src/assets/fonts/Inter_18pt-Regular.ttf') format('ttf');
+  src: url('../src/assets/fonts/Inter-VariableFont_opsz,wght.ttf') format('ttf');
+  font-style: normal;
+  font-display: swap;
+}
+
