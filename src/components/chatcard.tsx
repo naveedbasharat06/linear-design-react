@@ -97,7 +97,7 @@ const ChatCard: React.FC = () => {
   return (
     <div className="linear_gradient_main_card flex items-center justify-center rounded-3xl">
       <motion.div
-        className="background_gradient_card border-2 border-[#FFFFFF1A]  rounded-3xl md:min-h-[280px] p-6 lg:px-4 lg:py-5 max-w-[100%] md:w-[100%] lg:w-[931px] mx-auto flex flex-col md:flex-row gap-[80px] relative overflow-hidden"
+        className="background_gradient_card border-2 border-[#FFFFFF1A] bg-gradient-to-tr from-neutral-900 to-neutral-800  rounded-3xl md:min-h-[280px] p-6 lg:px-4 lg:py-5 max-w-[100%] md:w-[100%] lg:w-[931px] mx-auto flex flex-col md:flex-row gap-[80px] relative overflow-hidden"
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
       >
@@ -111,7 +111,11 @@ const ChatCard: React.FC = () => {
           src={topfullRectangle}
           alt="right rectangle"
         />
-        
+        <img
+          id="topright_rectange_bg"
+          src={topRightrectangle}
+          alt="right rectangle"
+        />
         {/* <div className="absolute inset-0 rounded-3xl "></div> */}
 
         <div className="flex flex-col justify-end relative z-[101]">
