@@ -114,7 +114,7 @@ const ChatCard: React.FC = () => {
         
         {/* <div className="absolute inset-0 rounded-3xl "></div> */}
 
-        <div className="flex flex-col justify-end relative z-10">
+        <div className="flex flex-col justify-end relative z-[101]">
           <div className="max-h-[87px] w-full max-w-[276px]">
             <h1 className="text-lg md:text-xl lg:text-2xl font-medium leading-[120%] tracking-normal space-y-1">
               <h3 className="text-white opacity-80">Test Tests Tests Test</h3>
